@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a202c; /* Dark background */
+            color: #cbd5e0; /* Light gray text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #2d3748; /* Slightly lighter dark background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #edf2f7; /* Off-white for the title */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+        }
+
+        .result {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #48bb78; /* Green for positive results */
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4299e1; /* Blue background for the button */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.125rem;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #3182ce; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Prediction Result</h1>
+        <p>Loan Status: <span class="result">{{ result }}</span></p>
+        <a href="/">Predict Again</a>
+    </div>
+</body>
+</html>

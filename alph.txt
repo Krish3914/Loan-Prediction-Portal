@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <!-- Header Section -->
+    <header class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">Loan Prediction</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-white">Home</a>
+                <a class="mr-5 hover:text-white">About</a>
+                <a class="mr-5 hover:text-white">Approach</a>
+                <a class="mr-5 hover:text-white">Github</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section (Form & Prediction) -->
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
+                <img class="object-cover object-center rounded" alt="hero" src="/static/Untitled design.png">
+            </div>
+            <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Loan Approval Prediction System</h1>
+                <p class="mb-8 leading-relaxed text-white">Use this system to predict whether your loan will be approved. Fill in your details and get a prediction.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section for Loan Prediction -->
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <form class="form-horizontal"  method="POST" action="/">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-col text-center w-full mb-12">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Now, it's your predictor</h1>
+                </div>
+                <div class="flex  w-full sm:flex-row flex-col mx-auto px-8 sm:px-0 items-end sm:space-x-4 sm:space-y-0 space-y-4">
+
+                    <!-- Gender Input -->
+                    <div class="relative sm:mb-0 flex-grow w-full">
+                        <label for="Gender" class="leading-7 text-sm text-gray-400">Gender</label>
+                        <select id="gender" name="Gender" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+                    <!-- Married Input -->
+                    <div class="relative sm:mb-0 flex-grow w-full">
+                        <label for="Married" class="leading-7 text-sm text-gray-400">Married</label>
+                        <select id="married" name="Married" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <!-- Education Input -->
+                    <div class="relative sm:mb-0 flex-grow w-full">
+                        <label for="Education" class="leading-7 text-sm text-gray-400">Education</label>
+                        <select id="education" name="Education" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            <option value="Graduate">Graduate</option>
+                            <option value="Not Graduate">Not Graduate</option>
+                        </select>
+                    </div>
+
+                    <!-- Self Employed Input -->
+                    <div class="relative sm:mb-0 flex-grow w-full">
+                        <label for="Self_Employed" class="leading-7 text-sm text-gray-400">Self Employed</label>
+                        <select id="self_employed" name="Self_Employed" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <!-- Credit Score Input -->
+                    <div class="relative sm:mb-0 flex-grow w-full">
+                        <label for="Credit_History" class="leading-7 text-sm text-gray-400">Credit History</label>
+                        <input type="number" id="credit_history" name="Credit_History" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="Credit History (0-1)">
+                    </div>
+
+                    <!-- Applicant Income Input -->
+                    <div class="relative sm:mb-0 flex-grow w-full">
+                        <label for="Applicant_Income" class="leading-7 text-sm text-gray-400">Applicant Income</label>
+                        <input type="number" id="applicant_income" name="Applicant_Income" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" min="0" step="100" placeholder="Enter income">
+                    </div>
+
+                    <!-- Coapplicant Income Input -->
+                    <div class="relative sm:mb-0 flex-grow w-full">
+                        <label for="Coapplicant_Income" class="leading-7 text-sm text-gray-400">Coapplicant Income</label>
+                        <input type="number" id="coapplicant_income" name="Coapplicant_Income" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" min="0" step="100" placeholder="Enter coapplicant income">
+                    </div>
+
+                    <!-- Loan Amount Input -->
+                    <div class="relative sm:mb-0 flex-grow w-full">
+                        <label for="Loan_Amount" class="leading-7 text-sm text-gray-400">Loan Amount</label>
+                        <input type="number" id="loan_amount" name="Loan_Amount" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" min="0" step="100" placeholder="Enter loan amount">
+                    </div>
+
+                    <!-- Loan Term Input -->
+                    <div class="relative sm:mb-0 flex-grow w-full">
+                        <label for="Loan_Amount_Term" class="leading-7 text-sm text-gray-400">Loan Amount Term</label>
+                        <input type="number" id="loan_amount_term" name="Loan_Amount_Term" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" min="0" step="1" placeholder="Loan term in months">
+                    </div>
+                </div>
+                <!-- Submit Button -->
+                <div class="text-center mt-6">
+                    <button type="submit" class="text-white bg-indigo-500 hover:bg-indigo-600 py-2 px-6 rounded text-lg">Predict Loan Approval</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+</body>
+</html>
